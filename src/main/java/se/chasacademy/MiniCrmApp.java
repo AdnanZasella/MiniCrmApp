@@ -8,7 +8,7 @@ import java.util.*;
 public class MiniCrmApp {
 
 
-    // --- Storage & IO ---
+
 
     /** customerId -> Customer */
     private final Map<String, Customer> store = new HashMap<>();
@@ -17,14 +17,13 @@ public class MiniCrmApp {
     private final Scanner scanner = new Scanner(System.in);
 
 
-    // --- ID generation ---
+
 
     /** simple counter for new ids (C-0004 and up) */
     private int nextId = 4;
 
 
 
-    // --- Entry point ---
 
     public static void main(String[] args) {
         new MiniCrmApp().run();
@@ -53,7 +52,7 @@ public class MiniCrmApp {
         }
     }
 
-    // --- Helpers / setup ---
+
 
     /**
      * Preload a few customers for testing.
@@ -81,25 +80,25 @@ public class MiniCrmApp {
         return id;
     }
 
-    // --- UI (menu) ---
+
 
     /**
      * Print the command menu.
      */
     private void printMenu() {
         System.out.println("\nMini-CRM");
-        System.out.println("1) Add customer");
-        System.out.println("2) Edit customer");
+        System.out.println("1: Add customer");
+        System.out.println("2: Edit customer");
         // System.out.println("2) Add tag to customer");
         // System.out.println("3) Add note to customer");
-        System.out.println("3) Show customer by id");
-        System.out.println("4) List all customers");
-        System.out.println("5) Delete customer");
-        System.out.println("0) Exit");
+        System.out.println("3: Show customer by id");
+        System.out.println("4: List all customers");
+        System.out.println("5: Delete customer");
+        System.out.println("0: Exit");
         System.out.print("Choose: ");
     }
 
-    // --- Actions (CRUD) ---
+
 
     /**
      * Create a new customer and (optionally) first email.
